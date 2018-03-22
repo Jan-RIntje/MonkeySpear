@@ -30,9 +30,8 @@
         {
             this.start_btn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.mainPanel = new System.Windows.Forms.Panel();
-            this.OutputLabel = new System.Windows.Forms.Label();
-            this.mainPanel.SuspendLayout();
+            this.OutputLabel = new System.Windows.Forms.TextBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // start_btn
@@ -48,6 +47,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.OutputLabel);
             this.groupBox1.Location = new System.Drawing.Point(48, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(959, 489);
@@ -55,40 +55,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // mainPanel
-            // 
-            this.mainPanel.AutoScroll = true;
-            this.mainPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.mainPanel.Controls.Add(this.OutputLabel);
-            this.mainPanel.Location = new System.Drawing.Point(118, 102);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(802, 378);
-            this.mainPanel.TabIndex = 3;
-            // 
             // OutputLabel
             // 
-            this.OutputLabel.AutoSize = true;
-            this.OutputLabel.Font = new System.Drawing.Font("Segoe Mono Boot", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OutputLabel.Location = new System.Drawing.Point(-2, -8);
-            this.OutputLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.OutputLabel.Location = new System.Drawing.Point(60, 55);
+            this.OutputLabel.Multiline = true;
             this.OutputLabel.Name = "OutputLabel";
-            this.OutputLabel.Size = new System.Drawing.Size(25, 19);
-            this.OutputLabel.TabIndex = 2;
-            this.OutputLabel.Text = "\"\"";
+            this.OutputLabel.Size = new System.Drawing.Size(765, 371);
+            this.OutputLabel.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.start_btn);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Monkey Typewriter";
-            this.mainPanel.ResumeLayout(false);
-            this.mainPanel.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -97,8 +83,7 @@
 
         private System.Windows.Forms.Button start_btn;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.Label OutputLabel;
+        private System.Windows.Forms.TextBox OutputLabel;
     }
 }
 
