@@ -13,7 +13,7 @@ namespace MonkeySpear
     public partial class Form1 : Form
     {
         static Random _random = new Random();
-        private static string output;
+        private static string output = "";
 
         public Form1()
         {
@@ -22,7 +22,8 @@ namespace MonkeySpear
 
         private void start_btn_Click(object sender, EventArgs e)
         {
-            
+            string print = Randomizer();
+            OutputLabel.Text = print;
         }
 
         public static char GetLetter()
@@ -39,7 +40,12 @@ namespace MonkeySpear
                 output = output + GetLetter();
             }
             return output;
+            
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
