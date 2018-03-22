@@ -99,8 +99,8 @@
             this.Controls.Add(this.start_btn);
             this.Name = "Form1";
             this.Text = "Monkey Typewriter";
-            this.mainPanel.ResumeLayout(false);
-            this.mainPanel.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

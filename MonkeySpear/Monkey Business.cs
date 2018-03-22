@@ -12,13 +12,18 @@ namespace MonkeySpear
 {
     public partial class Form1 : Form
     {
+        
         public string print;
         static Random _random = new Random();
-        private static string output = "";
+        public static string output = "";
 
         public Form1()
         {
             InitializeComponent();
+            MonkeyBusinessUI.Library.words.Add("a");
+            MonkeyBusinessUI.Library.words.Add("as");
+            MonkeyBusinessUI.Library.words.Add("arse");
+
         }
 
         
