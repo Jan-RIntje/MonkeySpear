@@ -9,7 +9,7 @@ namespace MonkeySpear
 {
     public static class MonkeyBusinessUI
     {
-       public static MonkeyLibrary Library = new MonkeyLibrary();
+        public static MonkeyLibrary Library = new MonkeyLibrary();
 
 
         public static void Interpreter(string rubric, List<string> words)
@@ -20,8 +20,12 @@ namespace MonkeySpear
                 if (rubric.Contains(word))
                 {
                     AddWordsFound(word);
-                   // RemoveWords(word);                  
                 }
+
+            }
+            foreach (string W in Library.wordsFound)
+            {
+                RemoveWords(W);
             }
         }
 
@@ -50,12 +54,12 @@ namespace MonkeySpear
             while (Form1.output.Length < 100)
             {
                 Form1.output = Form1.output + GetLetter();
-                
+
             }
             return Form1.output;
 
         }
     }
 
-    }
+}
 

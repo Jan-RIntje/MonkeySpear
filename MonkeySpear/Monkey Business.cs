@@ -21,6 +21,8 @@ namespace MonkeySpear
         {
             InitializeComponent();
             MonkeyBusinessUI.Library.words.Add("a");
+            MonkeyBusinessUI.Library.words.Add("as");
+            MonkeyBusinessUI.Library.words.Add("arse");
 
         }
 
@@ -31,9 +33,9 @@ namespace MonkeySpear
             output = "";
 
             MonkeyBusinessUI.Interpreter(OutputLabel.Text, MonkeyBusinessUI.Library.words);
-            foreach (string word in MonkeyBusinessUI.Library.words)
+            foreach (string word in MonkeyBusinessUI.Library.wordsFound)
             {
-                WordsFound.Text = word;
+                WordsFound.Text += word;
             }
             
         }

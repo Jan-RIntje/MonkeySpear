@@ -58,9 +58,8 @@
             this.WordsFound.AutoSize = true;
             this.WordsFound.Location = new System.Drawing.Point(349, 211);
             this.WordsFound.Name = "WordsFound";
-            this.WordsFound.Size = new System.Drawing.Size(35, 13);
+            this.WordsFound.Size = new System.Drawing.Size(0, 13);
             this.WordsFound.TabIndex = 2;
-            this.WordsFound.Text = "label1";
             this.WordsFound.Click += new System.EventHandler(this.WordsFound_Click);
             // 
             // Form1
