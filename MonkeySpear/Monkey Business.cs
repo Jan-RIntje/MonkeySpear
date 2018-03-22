@@ -14,10 +14,15 @@ namespace MonkeySpear
     {
         static Random _random = new Random();
         public static string output = "";
+        public List<string> find = new List<string>();
+        
 
         public Form1()
         {
             InitializeComponent();
+            find.Add("to");
+            find.Add("water");
+            find.Add("a");
         }
 
         private void start_btn_Click(object sender, EventArgs e)
@@ -25,6 +30,8 @@ namespace MonkeySpear
             string print = MonkeyBusinessUI.Randomizer();
             OutputLabel.Text = print;
             output = "";
+
+            MonkeyBusinessUI.Interpreter(OutputLabel.Text, find);
         }
 
 
