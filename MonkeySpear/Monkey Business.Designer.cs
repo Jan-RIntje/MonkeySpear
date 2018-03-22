@@ -28,13 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.start_btn = new System.Windows.Forms.Button();
+            this.OutputLabel = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // start_btn
+            // 
+            this.start_btn.Location = new System.Drawing.Point(12, 12);
+            this.start_btn.Name = "start_btn";
+            this.start_btn.Size = new System.Drawing.Size(75, 23);
+            this.start_btn.TabIndex = 0;
+            this.start_btn.Text = "Start";
+            this.start_btn.UseVisualStyleBackColor = true;
+            this.start_btn.Click += new System.EventHandler(this.start_btn_Click);
+            // 
+            // OutputLabel
+            // 
+            this.OutputLabel.AutoSize = true;
+            this.OutputLabel.Location = new System.Drawing.Point(123, 78);
+            this.OutputLabel.Name = "OutputLabel";
+            this.OutputLabel.Size = new System.Drawing.Size(35, 13);
+            this.OutputLabel.TabIndex = 1;
+            this.OutputLabel.Text = "label1";
+            this.OutputLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.OutputLabel);
+            this.Controls.Add(this.start_btn);
+            this.Name = "Form1";
+            this.Text = "Monkey Typewriter";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button start_btn;
+        private System.Windows.Forms.Label OutputLabel;
     }
 }
 
