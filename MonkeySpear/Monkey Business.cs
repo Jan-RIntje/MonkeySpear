@@ -76,10 +76,12 @@ namespace MonkeySpear
         }
 
         public bool cancelButton = false;
+        public int counter = 0;
 
         private void start_btn_Click(object sender, EventArgs e)
         {
-
+            counter = 0;
+            counterW.ResetText();
             word_count.Text = "";
             OutputLabel.ResetText();
             cancelButton = false;
@@ -121,6 +123,8 @@ namespace MonkeySpear
                 OutputLabel.Text += a;
 
                 OutputLabel.Refresh();
+
+                counterW.Text = counter++.ToString();
 
             }
 
@@ -179,6 +183,13 @@ namespace MonkeySpear
         {
             OutputLabel.ResetText();
             word_count.ResetText();
+            counterW.ResetText();
+            counter = 0;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
