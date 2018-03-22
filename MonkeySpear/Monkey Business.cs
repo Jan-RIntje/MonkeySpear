@@ -12,7 +12,6 @@ namespace MonkeySpear
 {
     public partial class Form1 : Form
     {
-        static Random _random = new Random();
 
         public Form1()
         {
@@ -23,13 +22,5 @@ namespace MonkeySpear
         {
 
         }
-
-        public static char GetLetter()
-        {
-            int number = _random.Next(0, 26);
-            char letter = (char)('a' + number);
-            return letter;
-        }
-
     }
 }
