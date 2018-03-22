@@ -32,7 +32,7 @@ namespace MonkeySpear
 
         public static void removeWords(string word)
         {
-            Library.words.Add(word);
+            Library.words.Remove(word);
         }
 
 
