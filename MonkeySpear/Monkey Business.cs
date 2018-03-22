@@ -1,5 +1,4 @@
-﻿using MonkeyBusinessLibrary;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +12,10 @@ namespace MonkeySpear
 {
     public partial class Form1 : Form
     {
-        static Random _random = new Random();
-        public static string output = "";
         
+        public string print;
+        static Random _random = new Random();
+        private static string output = "";
 
         public Form1()
         {
@@ -26,30 +26,67 @@ namespace MonkeySpear
 
         }
 
+        
+
         private void start_btn_Click(object sender, EventArgs e)
         {
-            string print = MonkeyBusinessUI.Randomizer();
-            OutputLabel.Text = print;
-            output = "";
 
-            MonkeyBusinessUI.Interpreter(OutputLabel.Text, MonkeyBusinessUI.Library.words);
-            foreach (string word in MonkeyBusinessUI.Library.wordsFound)
+            Print();
+                                                        
+        }
+
+        private void Print()
+        {
+            for (int i = 0; i < 5; i++)
             {
-                WordsFound.Text += word;
+
+                print = Randomizer();
+                OutputLabel.Text += "\n";
+
+                foreach (char a in print)
+                {
+                    OutputLabel.AppendText(a.ToString());
+                    OutputLabel.Refresh();
+
+
+                }
+                output = "";
+
             }
             
         }
 
+        protected void Print(string random){
+           
 
+            foreach(char a in print)
+            {
+                OutputLabel.Text += a;
+                OutputLabel.Refresh();
+            }
+           
+        }
 
-        private void label1_Click(object sender, EventArgs e)
+        public static char GetLetter()
         {
+            int number = _random.Next(0, 26);
+            char letter = (char)('a' + number);
+            return letter;
+        }
+
+        public string Randomizer()
+        {
+            
+            while (output.Length < 100)
+            {
+                output += GetLetter();
+            }
+            return output;
             
         }
 
-        private void WordsFound_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
