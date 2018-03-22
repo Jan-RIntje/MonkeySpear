@@ -11,30 +11,6 @@ namespace MonkeySpear
     {
        public static MonkeyLibrary Library = new MonkeyLibrary();
 
-       public static void Interpreter(string rubric)
-        {
-            foreach (string word in Library.words)
-            {
-                if (rubric.IndexOf(word, StringComparison.OrdinalIgnoreCase) > -1){
-
-                    int start = rubric.IndexOf(word);
-                    string subword = rubric.Substring(start, word.Length);
-                    int i = 0;
-                    int counter = 0;
-                    foreach (char a in word)
-                    {
-
-                        if (a == subword.IndexOf(subword.Substring(i, i), i))
-                        {
-                            counter++;
-                        }
-                       
-                        i++;
-                    }
-
-                }
-            }
-        }
 
         public static void Interpreter(string rubric, List<string> words)
         {
@@ -58,7 +34,7 @@ namespace MonkeySpear
         {
             Library.words.Add(word);
         }
-    }
+
 
         static Random _random = new Random();
 
@@ -69,4 +45,6 @@ namespace MonkeySpear
             return letter;
         }
     }
-}
+
+    }
+
