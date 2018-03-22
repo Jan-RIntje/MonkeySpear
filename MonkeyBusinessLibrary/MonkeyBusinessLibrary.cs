@@ -7,9 +7,12 @@ using System.IO;
 
 namespace MonkeyBusinessLibrary
 {
-    public class MonkeyBusinessLibrary
+    public class MonkeyLibrary
     {
-        public void GetWords(List<string> words, string path)
+        public List<string> words;
+        public List<string> wordsFound;
+
+        public void GetWords(string path)
         {
             using (StreamReader reader = new StreamReader(path))
             {

@@ -76,5 +76,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MonkeyBusinessLibrary\MonkeyBusinessLibrary.csproj">
+      <Project>{6c4b57df-6d8a-4218-8ca6-067ce465e159}</Project>
+      <Name>MonkeyBusinessLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
