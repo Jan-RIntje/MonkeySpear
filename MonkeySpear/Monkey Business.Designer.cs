@@ -28,13 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.start_btn = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // start_btn
+            // 
+            this.start_btn.Location = new System.Drawing.Point(12, 12);
+            this.start_btn.Name = "start_btn";
+            this.start_btn.Size = new System.Drawing.Size(75, 23);
+            this.start_btn.TabIndex = 0;
+            this.start_btn.Text = "Start";
+            this.start_btn.UseVisualStyleBackColor = true;
+            this.start_btn.Click += new System.EventHandler(this.start_btn_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.start_btn);
+            this.Name = "Form1";
+            this.Text = "Monkey Typewriter";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button start_btn;
     }
 }
 
