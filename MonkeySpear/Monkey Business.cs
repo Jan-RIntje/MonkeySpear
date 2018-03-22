@@ -79,9 +79,14 @@ namespace MonkeySpear
 
         private void start_btn_Click(object sender, EventArgs e)
         {
-            
-            while(cancelButton == false)
+
+            word_count.Text = "";
+            OutputLabel.ResetText();
+            cancelButton = false;
+
+            while (cancelButton == false)
             {
+                start_btn.Enabled = false;
                
                     eventH(sender, e);
 
@@ -91,13 +96,13 @@ namespace MonkeySpear
                 
             }
           
+            if (cancelButton == true)
+                foreach (string word in MonkeyBusinessUI.Library.wordsFound)
+                {
+                    word_count.Text += word + " ";
 
-            foreach (string word in MonkeyBusinessUI.Library.wordsFound)
-            {
-                word_count.Text += word + " ";
-            }
-            
-
+                }
+            /*word_count.Text += "\n";*/
 
 
 
@@ -167,6 +172,13 @@ namespace MonkeySpear
         {
             
             cancelButton = true;
+            start_btn.Enabled = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OutputLabel.ResetText();
+            word_count.ResetText();
         }
     }
 }
