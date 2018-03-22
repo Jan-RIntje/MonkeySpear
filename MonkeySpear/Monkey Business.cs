@@ -56,6 +56,7 @@ namespace MonkeySpear
 
             output = "";
         }
+        
 
         protected void Print(string random)
         {
@@ -76,6 +77,7 @@ namespace MonkeySpear
         {
             int number = _random.Next(0, 26);
             char letter = (char)('a' + number);
+            DoEvents();
             return letter;
         }
 
