@@ -38,7 +38,7 @@
             // start_btn
             // 
             this.start_btn.Location = new System.Drawing.Point(16, 15);
-            this.start_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.start_btn.Margin = new System.Windows.Forms.Padding(4);
             this.start_btn.Name = "start_btn";
             this.start_btn.Size = new System.Drawing.Size(100, 28);
             this.start_btn.TabIndex = 0;
@@ -57,6 +57,7 @@
             // 
             // mainPanel
             // 
+            this.mainPanel.AutoScroll = true;
             this.mainPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.mainPanel.Controls.Add(this.OutputLabel);
             this.mainPanel.Location = new System.Drawing.Point(118, 102);
@@ -83,7 +84,7 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.start_btn);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Monkey Typewriter";
             this.mainPanel.ResumeLayout(false);
