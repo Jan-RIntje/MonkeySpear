@@ -15,7 +15,7 @@ namespace MonkeySpear
         
         public string print;
         static Random _random = new Random();
-        private static string output = "";
+        public static string output = "";
 
         public Form1()
         {
