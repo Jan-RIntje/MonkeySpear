@@ -12,6 +12,7 @@ namespace MonkeySpear
 {
     public partial class Form1 : Form
     {
+        public string print;
         static Random _random = new Random();
         private static string output = "";
 
@@ -20,10 +21,48 @@ namespace MonkeySpear
             InitializeComponent();
         }
 
+        
+
         private void start_btn_Click(object sender, EventArgs e)
         {
-            string print = Randomizer();
-            OutputLabel.Text = print;
+          
+            for (int i=0; i < 30 ; i++)
+            {
+                
+              eventH(sender, e);
+                
+
+            }
+                
+
+                
+            
+          
+
+        }
+
+        private void eventH(object sender, EventArgs e)
+        {
+            print = Randomizer();
+            OutputLabel.Text += "\n";
+           
+            foreach (char a in print)
+            {
+               OutputLabel.Text += a;
+                OutputLabel.Refresh();               
+            }
+            output = "";
+        }
+
+        protected void Print(string random){
+           
+
+            foreach(char a in print)
+            {
+                OutputLabel.Text += a;
+                OutputLabel.Refresh();
+            }
+           
         }
 
         public static char GetLetter()
@@ -33,11 +72,12 @@ namespace MonkeySpear
             return letter;
         }
 
-        public static string Randomizer()
+        public string Randomizer()
         {
+            
             while (output.Length < 100)
             {
-                output = output + GetLetter();
+                output += GetLetter();
             }
             return output;
             
@@ -45,7 +85,6 @@ namespace MonkeySpear
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
         }
     }
 }
