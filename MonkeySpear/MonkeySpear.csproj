@@ -51,6 +51,7 @@
     <Compile Include="Monkey Business.Designer.cs">
       <DependentUpon>Monkey Business.cs</DependentUpon>
     </Compile>
+    <Compile Include="MonkeyBusinessUI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
