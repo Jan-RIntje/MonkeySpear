@@ -12,6 +12,7 @@ namespace MonkeySpear
 {
     public partial class Form1 : Form
     {
+        
         public string print;
         static Random _random = new Random();
         private static string output = "";
@@ -25,33 +26,30 @@ namespace MonkeySpear
 
         private void start_btn_Click(object sender, EventArgs e)
         {
-          
-            for (int i=0; i < 30 ; i++)
-            {
-                
-              eventH(sender, e);
-                
 
-            }
-                
-
-                
-            
-          
-
+            Print();
+                                                        
         }
 
-        private void eventH(object sender, EventArgs e)
+        private void Print()
         {
-            print = Randomizer();
-            OutputLabel.Text += "\n";
-           
-            foreach (char a in print)
+            for (int i = 0; i < 5; i++)
             {
-               OutputLabel.Text += a;
-                OutputLabel.Refresh();               
+
+                print = Randomizer();
+                OutputLabel.Text += "\n";
+
+                foreach (char a in print)
+                {
+                    OutputLabel.AppendText(a.ToString());
+                    OutputLabel.Refresh();
+
+
+                }
+                output = "";
+
             }
-            output = "";
+            
         }
 
         protected void Print(string random){
