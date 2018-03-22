@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.counterW = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -136,11 +137,22 @@
             this.counterW.Size = new System.Drawing.Size(0, 21);
             this.counterW.TabIndex = 6;
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(235, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(317, 23);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "To generate, or not to generate: that is the question.";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 523);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.groupBox1);
@@ -165,6 +177,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label counterW;
+        private System.Windows.Forms.Label label2;
     }
 }
 
