@@ -37,10 +37,8 @@ namespace MonkeySpear
             MonkeyBusinessUI.Library.words.Add("slings");
             MonkeyBusinessUI.Library.words.Add("and");
             MonkeyBusinessUI.Library.words.Add("arrows");
-            MonkeyBusinessUI.Library.words.Add("of");
             MonkeyBusinessUI.Library.words.Add("outrageous");
             MonkeyBusinessUI.Library.words.Add("fortune");
-            MonkeyBusinessUI.Library.words.Add("of");
             MonkeyBusinessUI.Library.words.Add("take");
             MonkeyBusinessUI.Library.words.Add("arms");
             MonkeyBusinessUI.Library.words.Add("against");
@@ -77,19 +75,28 @@ namespace MonkeySpear
 
         }
 
-
+        public bool cancelButton = false;
 
         private void start_btn_Click(object sender, EventArgs e)
         {
-
-            for (int i = 0; i < 60; i++)
+            
+            while(cancelButton == false)
             {
+               
+                    eventH(sender, e);
 
-                eventH(sender, e);
+                    MonkeyBusinessUI.Interpreter(print, MonkeyBusinessUI.Library.words);
 
 
+                
             }
+          
 
+            foreach (string word in MonkeyBusinessUI.Library.wordsFound)
+            {
+                word_count.Text += word + " ";
+            }
+            
 
 
 
@@ -99,7 +106,9 @@ namespace MonkeySpear
 
         private void eventH(object sender, EventArgs e)
         {
+            
             print = Randomizer();
+            
             OutputLabel.Text += "\n";
 
             foreach (char a in print)
@@ -140,14 +149,15 @@ namespace MonkeySpear
         public string Randomizer()
         {
 
-            while (output.Length < 100)
+            while (output.Length < 110)
             {
                 output += GetLetter();
                 DoEvents();
             }
             return output;
-
         }
+
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -155,7 +165,8 @@ namespace MonkeySpear
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OutputLabel.Text = String.Empty;
+            
+            cancelButton = true;
         }
     }
 }
