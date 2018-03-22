@@ -16,5 +16,15 @@ namespace MonkeySpear
             char letter = (char)('a' + number);
             return letter;
         }
+
+        public static string Randomizer()
+        {
+            while (Form1.output.Length < 100)
+            {
+                Form1.output = Form1.output + GetLetter();
+            }
+            return Form1.output;
+
+        }
     }
 }
