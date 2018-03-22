@@ -26,11 +26,11 @@ namespace MonkeySpear
         private void start_btn_Click(object sender, EventArgs e)
         {
           
-            for (int i=0; i < 30 ; i++)
+            for (int i=0; i < 60 ; i++)
             {
                 
               eventH(sender, e);
-                
+              
 
             }
                 
@@ -48,21 +48,28 @@ namespace MonkeySpear
            
             foreach (char a in print)
             {
-               OutputLabel.Text += a;
-                OutputLabel.Refresh();               
+                OutputLabel.Text += a;
+                
+                OutputLabel.Refresh();
+                
             }
+
             output = "";
         }
 
-        protected void Print(string random){
-           
-
+        protected void Print(string random)
+        {
             foreach(char a in print)
             {
                 OutputLabel.Text += a;
                 OutputLabel.Refresh();
+                DoEvents();
             }
-           
+        }
+
+        public static void DoEvents()
+        {
+            Application.DoEvents();
         }
 
         public static char GetLetter()
@@ -78,6 +85,7 @@ namespace MonkeySpear
             while (output.Length < 100)
             {
                 output += GetLetter();
+                DoEvents();
             }
             return output;
             
@@ -85,6 +93,11 @@ namespace MonkeySpear
 
         private void label1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OutputLabel.Text = String.Empty;
         }
     }
 }
