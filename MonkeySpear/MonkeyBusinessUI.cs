@@ -20,7 +20,7 @@ namespace MonkeySpear
                 if (rubric.Contains(word))
                 {
                     AddWordsFound(word);
-                    removeWords(word);                  
+                   // RemoveWords(word);                  
                 }
             }
         }
@@ -30,7 +30,7 @@ namespace MonkeySpear
             Library.wordsFound.Add(word);
         }
 
-        public static void removeWords(string word)
+        public static void RemoveWords(string word)
         {
             Library.words.Remove(word);
         }

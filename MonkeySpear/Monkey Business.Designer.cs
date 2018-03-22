@@ -30,6 +30,7 @@
         {
             this.start_btn = new System.Windows.Forms.Button();
             this.OutputLabel = new System.Windows.Forms.Label();
+            this.WordsFound = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // start_btn
@@ -52,11 +53,22 @@
             this.OutputLabel.Text = "label1";
             this.OutputLabel.Click += new System.EventHandler(this.label1_Click);
             // 
+            // WordsFound
+            // 
+            this.WordsFound.AutoSize = true;
+            this.WordsFound.Location = new System.Drawing.Point(349, 211);
+            this.WordsFound.Name = "WordsFound";
+            this.WordsFound.Size = new System.Drawing.Size(35, 13);
+            this.WordsFound.TabIndex = 2;
+            this.WordsFound.Text = "label1";
+            this.WordsFound.Click += new System.EventHandler(this.WordsFound_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.WordsFound);
             this.Controls.Add(this.OutputLabel);
             this.Controls.Add(this.start_btn);
             this.Name = "Form1";
@@ -70,6 +82,7 @@
 
         private System.Windows.Forms.Button start_btn;
         private System.Windows.Forms.Label OutputLabel;
+        private System.Windows.Forms.Label WordsFound;
     }
 }
 

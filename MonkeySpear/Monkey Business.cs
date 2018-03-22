@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MonkeyBusinessLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,15 +15,13 @@ namespace MonkeySpear
     {
         static Random _random = new Random();
         public static string output = "";
-        public List<string> find = new List<string>();
         
 
         public Form1()
         {
             InitializeComponent();
-            find.Add("to");
-            find.Add("water");
-            find.Add("a");
+            MonkeyBusinessUI.Library.words.Add("a");
+
         }
 
         private void start_btn_Click(object sender, EventArgs e)
@@ -31,7 +30,12 @@ namespace MonkeySpear
             OutputLabel.Text = print;
             output = "";
 
-            MonkeyBusinessUI.Interpreter(OutputLabel.Text, find);
+            MonkeyBusinessUI.Interpreter(OutputLabel.Text, MonkeyBusinessUI.Library.words);
+            foreach (string word in MonkeyBusinessUI.Library.words)
+            {
+                WordsFound.Text = word;
+            }
+            
         }
 
 
@@ -39,6 +43,11 @@ namespace MonkeySpear
         private void label1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void WordsFound_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

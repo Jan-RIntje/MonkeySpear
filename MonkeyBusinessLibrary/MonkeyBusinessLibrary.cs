@@ -9,8 +9,8 @@ namespace MonkeyBusinessLibrary
 {
     public class MonkeyLibrary
     {
-        public List<string> words;
-        public List<string> wordsFound;
+        public List<string> words = new List<string>();
+        public List<string> wordsFound = new List<string>();
 
         public void GetWords(string path)
         {
