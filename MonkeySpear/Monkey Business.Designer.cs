@@ -30,13 +30,21 @@
         {
             this.start_btn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.OutputLabel = new System.Windows.Forms.TextBox();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.OutputLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.word_count = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.counterW = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // start_btn
             // 
-            this.start_btn.Location = new System.Drawing.Point(12, 12);
+            this.start_btn.Location = new System.Drawing.Point(483, 340);
             this.start_btn.Name = "start_btn";
             this.start_btn.Size = new System.Drawing.Size(75, 23);
             this.start_btn.TabIndex = 0;
@@ -46,36 +54,114 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.OutputLabel);
-            this.groupBox1.Location = new System.Drawing.Point(51, 40);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Controls.Add(this.counterW);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.word_count);
+            this.groupBox1.Controls.Add(this.start_btn);
+            this.groupBox1.Location = new System.Drawing.Point(36, 103);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(704, 382);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(719, 367);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.AutoScroll = true;
+            this.mainPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.mainPanel.Controls.Add(this.OutputLabel);
+            this.mainPanel.Location = new System.Drawing.Point(88, 136);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(602, 218);
+            this.mainPanel.TabIndex = 3;
             // 
             // OutputLabel
             // 
-            this.OutputLabel.Location = new System.Drawing.Point(15, 17);
-            this.OutputLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.OutputLabel.Multiline = true;
+            this.OutputLabel.AutoSize = true;
+            this.OutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OutputLabel.Location = new System.Drawing.Point(-2, -6);
             this.OutputLabel.Name = "OutputLabel";
-            this.OutputLabel.Size = new System.Drawing.Size(453, 357);
-            this.OutputLabel.TabIndex = 1;
-            this.OutputLabel.Click += new System.EventHandler(this.label1_Click);
+            this.OutputLabel.Size = new System.Drawing.Size(17, 13);
+            this.OutputLabel.TabIndex = 2;
+            this.OutputLabel.Text = "\"\"";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(579, 340);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Stop";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // word_count
+            // 
+            this.word_count.AutoSize = true;
+            this.word_count.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.word_count.Location = new System.Drawing.Point(49, 274);
+            this.word_count.Name = "word_count";
+            this.word_count.Size = new System.Drawing.Size(0, 21);
+            this.word_count.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(61, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(657, 61);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Shakespeare\'s Monkey Typewriter";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(382, 340);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Clear";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // counterW
+            // 
+            this.counterW.AutoSize = true;
+            this.counterW.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.counterW.Location = new System.Drawing.Point(50, 301);
+            this.counterW.Name = "counterW";
+            this.counterW.Size = new System.Drawing.Size(0, 21);
+            this.counterW.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(235, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(317, 23);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "To generate, or not to generate: that is the question.";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 523);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.start_btn);
             this.Name = "Form1";
             this.Text = "Monkey Typewriter";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -84,7 +170,14 @@
 
         private System.Windows.Forms.Button start_btn;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox OutputLabel;
+        private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Label OutputLabel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label word_count;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label counterW;
+        private System.Windows.Forms.Label label2;
     }
 }
 
